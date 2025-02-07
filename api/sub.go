@@ -14,6 +14,7 @@ import (
 	mgdb "github.com/FoolVPN-ID/megalodon/db"
 	"github.com/FoolVPN-ID/tool/modules/subconverter"
 	"github.com/gin-gonic/gin"
+	"github.com/sagernet/sing/common/json"
 )
 
 type apiGetSubStruct struct {
@@ -208,6 +209,7 @@ func handleGetSubApi(c *gin.Context) {
 		return
 	}
 
+	var resultJson any
 	switch getQuery.Format {
 	case "raw":
 		c.String(200, strings.Join(rawProxies, "\n"))
@@ -217,17 +219,27 @@ func handleGetSubApi(c *gin.Context) {
 			c.String(500, err.Error())
 			return
 		}
-		c.JSON(200, subProxies.Result.SFA)
+
+		resultByte, _ := json.Marshal(subProxies.Result.SFA)
+		json.Unmarshal(resultByte, &resultJson)
+
+		c.JSON(200, resultJson)
 		return
 	case "bfr":
 		if err := subProxies.ToBFR(); err != nil {
 			c.String(500, err.Error())
 			return
 		}
-		c.JSON(200, subProxies.Result.BFR)
+		resultByte, _ := json.Marshal(subProxies.Result.BFR)
+		json.Unmarshal(resultByte, &resultJson)
+
+		c.JSON(200, resultJson)
 		return
 	case "sing-box":
-		c.JSON(200, subProxies.Outbounds)
+		resultByte, _ := json.Marshal(subProxies.Outbounds)
+		json.Unmarshal(resultByte, &resultJson)
+
+		c.JSON(200, resultJson)
 		return
 	case "clash":
 		if err := subProxies.ToClash(); err != nil {
