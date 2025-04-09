@@ -33,6 +33,9 @@ func StartApi() {
 	// convert
 	r.POST("/convert", TH.HandlePostConvert)
 
+	// udprelay
+	r.POST("/udprelay", TH.HandlePostUdpRelay)
+
 	// Listen on port 8080 by default
 	r.Run()
 }

@@ -1,7 +1,7 @@
 github.com/FoolVPN-ID/megalodon v0.0.0-20250207013754-75f408af7acf h1:oZq31E+Ina7Pm2DNF5POvJoTF1cvEGFdVYRtfbVQLrw=
 github.com/FoolVPN-ID/megalodon v0.0.0-20250207013754-75f408af7acf/go.mod h1:SxS54BFt73+SbjMY8oInW8PQFQ9w2Spb9pZwDPvVn/s=
-github.com/FoolVPN-ID/tool v0.0.0-20250211043526-9840b41d691d h1:pWk7wTlBrGcPGoHozl7BSqoKHjS4w0zgBddAKneraMw=
-github.com/FoolVPN-ID/tool v0.0.0-20250211043526-9840b41d691d/go.mod h1:B2PAcqZDCoV/hqjeQo9dAm70/zaCNFxMr3rvhL0Z3v4=
+github.com/FoolVPN-ID/tool v0.0.0-20250409165807-fb025bae6c3d h1:CBk9lOGW90cJKfTN4Ys+NcPstqhlrChyn+EZ5iIo/Js=
+github.com/FoolVPN-ID/tool v0.0.0-20250409165807-fb025bae6c3d/go.mod h1:B2PAcqZDCoV/hqjeQo9dAm70/zaCNFxMr3rvhL0Z3v4=
 github.com/NicoNex/echotron/v3 v3.43.0 h1:efE2spw3mfU0Ev20m0PqqvgMSm0xHzgSxlWAEmC9RC4=
 github.com/NicoNex/echotron/v3 v3.43.0/go.mod h1:7LvjveJmezuUOeaoA3nzQduNlSPQYfq219Z+baKY04Q=
 github.com/Noooste/azuretls-client v1.6.2 h1:ZArXcHEK3rckFjVkpg6jA7AbbQF3eliraUbWtEAHXLI=
