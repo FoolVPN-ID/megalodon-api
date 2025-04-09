@@ -4,7 +4,7 @@ go 1.23.2
 
 require (
 	github.com/FoolVPN-ID/megalodon v0.0.0-20250207013754-75f408af7acf
-	github.com/FoolVPN-ID/tool v0.0.0-20250409165807-fb025bae6c3d
+	github.com/FoolVPN-ID/tool v0.0.0-20250409180723-a7fd2915d8e5
 	github.com/Noooste/azuretls-client v1.6.2
 	github.com/gin-contrib/cors v1.7.3
 	github.com/gin-gonic/gin v1.10.0
