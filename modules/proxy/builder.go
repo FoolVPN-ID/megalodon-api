@@ -75,7 +75,11 @@ func BuildProxyFieldsFromUser(user *users.UserStruct, baseProxyField database.Pr
 					}
 				}
 
-				proxyField.Remark = strings.ToUpper(fmt.Sprintf("%d ✨ %s %s %s %s %s", len(results)+1, helper.CCToEmoji(proxyField.CountryCode), serverInfo["org"], transport, mode, tlsStr))
+				proxyField.Remark = strings.ToUpper(fmt.Sprintf("%d ✨", len(results)+1))
+				if user.Relay != "" {
+					proxyField.Remark = strings.ToUpper(fmt.Sprintf("%s %s <-", proxyField.Remark, helper.CCToEmoji(user.Relay)))
+				}
+				proxyField.Remark = strings.ToUpper(fmt.Sprintf("%s %s %s %s %s %s", proxyField.Remark, helper.CCToEmoji(proxyField.CountryCode), serverInfo["org"], transport, mode, tlsStr))
 
 				results = append(results, proxyField)
 			}
