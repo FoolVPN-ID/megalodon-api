@@ -24,6 +24,9 @@ func StartApi() {
 	// Sub
 	r.GET("/sub", handleGetSubApi)
 
+	// dabatase
+	r.POST("/db/:apiToken/exec", handlePostDBQuery)
+
 	// Users
 	r.GET("/user/:apiToken/:id", handleGetUserApi)
 
