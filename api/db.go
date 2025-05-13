@@ -52,10 +52,12 @@ func handlePostDBQuery(c *gin.Context) {
 	}
 
 	for _, query := range strings.Split(dbExecQueryForm.Query, ";") {
-		if _, err = dbTr.Exec(query); err != nil {
-			dbTr.Rollback()
-			c.String(500, err.Error())
-			return
+		if query != "" {
+			if _, err = dbTr.Exec(query + ";"); err != nil {
+				dbTr.Rollback()
+				c.String(500, err.Error())
+				return
+			}
 		}
 	}
 
